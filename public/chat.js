@@ -1,5 +1,5 @@
 // Make connection
-var socket = io.connect("http://localhost:4000");
+var socket = io.connect("http://michaelsudirman.github.io/simple-chatroom");
 
 // Query DOM
 var message = document.getElementById("message");
@@ -28,6 +28,5 @@ socket.on("chat", function(data) {
 });
 
 socket.on("typing", function(data) {
-  feedback.innerHTML =
-    "<p><em>" + data + " is typing a message...</em></p>";
+  feedback.innerHTML = "<p><em>" + data + " is typing a message...</em></p>";
 });
